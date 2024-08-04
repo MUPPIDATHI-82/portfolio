@@ -1,0 +1,48 @@
+body {
+  margin: 0px;
+}
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.container {
+  margin-top: 56px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.aadhi {
+  height: 200px;
+  background-color: rgba(28, 26, 26, 0.1);
+  width: 350px;
+  border: solid 2px rgba(28, 26, 26, 0.1);
+  transition: ease-in-out 0.3s;
+  border-radius: 20px;
+  
+}
+.contactpage {
+  color: rgb(0, 123, 255);
+}
+/* Font Style */
+* {
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+}
+.aadhi:hover {
+  transform: scale(1.1);
+  border-color: rgb(0, 123, 255);
+  box-shadow: 20px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2),
+    0px 0px 8px 6px rgba(0, 0, 0, 0.19);
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+.contactpage:hover{
+  transform: none;
+  background: none;
+  color: rgb(0, 123, 255);
+}

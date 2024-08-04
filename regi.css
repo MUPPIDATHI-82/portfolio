@@ -1,0 +1,121 @@
+body {
+    margin: 0px;
+  }
+  .navbarheader {
+    display: flex;
+    justify-content: space-around;
+    align-items: normal;
+    flex-direction: row;
+    gap: 400px;
+  }
+  .navheading {
+    color: rgb(0, 0, 0);
+  }
+  .navlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .homepage,
+  .aboutpage,
+  .contactpage,
+  .registerpage,
+  .loginpage {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    width: 80px;
+    border-radius: 30px;
+    transition: all 0.4s;
+  }
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2),
+      0px 0px 8px 6px rgba(0, 0, 0, 0.19);
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+  .loginbutton {
+    height: 40px;
+    width: 305px;
+    background-color: blue;
+    color: white;
+    border: none;
+    /* border: solid 2px black;
+    border-radius: 20px; */
+  }
+  .or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .username,
+  .password {
+    height: 30px;
+    width: 300px;
+    /* border: solid 2px rgb(0, 0, 0); */
+  }
+  * {
+    font-family: sans-serif;
+  }
+  /* .loginpage:hover {
+    transform: none;
+    background: none;
+    color: rgb(0, 123, 255);
+  } */
+  
+  .homepage:hover {
+    transform: scale(1.2);
+    background-color: rgb(0, 123, 255);
+    color: white;
+  }
+  .aboutpage:hover{
+    transform: scale(1.2);
+    background-color: rgb(0, 123, 255);
+    color: white
+  }
+  .contactpage:hover{
+    transform: scale(1.2);
+    background-color: rgb(0, 123, 255);
+    color: white
+  }
+  .contactpage:hover{
+    transform: scale(1.2);
+    background-color: rgb(0, 123, 255);
+    color: white
+  }
+  .loginpage:hover{
+    transform: scale(1.2);
+    background-color: rgb(0, 123, 255);
+    color: white
+  }
+  .registerpage:hover{
+    transform: none;
+    background: none;
+    color: rgb(0, 123, 255);
+  }
+  /* .forgot:hover{
+    transform: none;
+    background: none;
+  } */
+  

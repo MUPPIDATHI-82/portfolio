@@ -1,0 +1,24 @@
+body {
+  margin: 0px;
+}
+h1{
+  color: black;
+  text-align: center;
+}
+.content {
+  margin: 20px;
+  text-indent: 50px;
+  letter-spacing: 0.8px;
+  line-height: 1.8;
+  color: black;
+  font-weight: lighter;
+  text-align: justify;
+}
+.aboutpage{
+  color: rgb(0, 123, 255);
+}
+.aboutpage:hover{
+  transform: none;
+  background: none;
+  color: rgb(0, 123, 255);
+}
