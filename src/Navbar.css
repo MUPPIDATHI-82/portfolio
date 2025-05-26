@@ -1,12 +1,12 @@
 /* Import Poppins Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 /* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Navbar Container */
@@ -25,8 +25,8 @@
   z-index: 100;
   transition: all 0.3s ease;
 }
-.logoname{
-     color: #0043fa;
+.logoname {
+  color: #0043fa;
 }
 
 /* Navigation Items */
@@ -66,4 +66,80 @@
 /* Responsive Padding for Page Content */
 body {
   padding-top: 70px; /* Ensure content doesn't go under navbar */
+}
+/* Hamburger Menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  width: 25px;
+  height: 20px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  height: 3px;
+  background-color: #444;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger to "X" when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive for mobile devices */
+@media screen and (max-width: 768px) {
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav items by default */
+  .navitems {
+    position: fixed;
+    top: 70px; /* same as navbar height */
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #ffffff, #f2f2f2);
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+  }
+
+  /* Show nav items when toggled */
+  .navitems.show {
+    display: flex;
+    animation: fadeInDown 0.3s ease forwards;
+  }
+
+  /* Nav links bigger and easier to tap */
+  .navlink {
+    font-size: 22px;
+    padding: 12px 20px;
+  }
+}
+
+/* Animation for dropdown */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
