@@ -11,7 +11,13 @@ const Home = () => {
         </h1>
         <p className="tagline">Creating Ideas, Crafting Success...!</p>
         <div className="downloads">
-          <a href="#" className="download">
+          <a
+            href="/ResumePDF.pdf"
+            className="download"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Download Resume
           </a>
         </div>
