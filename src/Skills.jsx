@@ -20,6 +20,7 @@ const Skills = () => {
     <>
       <div className="skills-section">
         <h2 className="skills-heading">Skills</h2>
+        <hr className="underline"/>
         <div className="skill-contents">
           {skillItems.map((skill) => (
             <div className="skill-content" key={skill.name}>

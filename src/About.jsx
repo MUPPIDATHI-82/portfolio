@@ -6,6 +6,7 @@ function About() {
   return (
     <>
       <p className="about-heading">About Me!</p>
+      <hr className="underline"/>
       <div className="container">
         <img src={dpImage} alt="Profile" className="about-image" />
         <div className="about-content">
@@ -24,6 +25,7 @@ function About() {
       {/* Education Section */}
       <div className="education-section">
         <p className="about-heading">Education</p>
+        <hr className="underline"/>
         <div className="edu-container">
           <div className="college">
             <h1>BE - Computer Science and Engineering</h1>

@@ -1,29 +1,40 @@
+/* Projects Section */
 .projects-section {
-  padding: 50px 30px;
+  padding-top: 30px;
   font-family: Arial, sans-serif;
+}
+.underline {
+  width: 80px;                /* length of the line */
+  height: 4px;                /* thickness of the line */
+  background-color: #e63946;  /* your accent color */
+  border: none;               /* remove default <hr> styles */
+  margin: 8px auto 32px;      /* center it and add vertical spacing */
+  border-radius: 2px;         /* rounded ends */
 }
 
 .projects-heading {
   text-align: center;
   font-size: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: #0a433d;
 }
 
 .project-card {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
   margin-bottom: 30px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-image {
-  flex: 1;
+  flex: 1 1 200px;     /* grow, shrink, basis */
   max-width: 20%;
+  min-width: 140px;
 }
 
 .project-image img {
@@ -33,7 +44,7 @@
 }
 
 .project-content {
-  flex: 2;
+  flex: 2 1 300px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -43,6 +54,7 @@
   font-size: 24px;
   margin-bottom: 20px;
 }
+
 .tech {
   font-weight: bold;
   margin-bottom: 10px;
@@ -56,6 +68,7 @@
 .desc {
   margin-bottom: 15px;
   color: #333;
+  flex-grow: 1;
 }
 
 .source-link {
@@ -67,107 +80,71 @@
 .source-link:hover {
   text-decoration: underline;
 }
-.uiux-section {
-  padding: 40px 20px;
-  background-color: #fefefe;
-  text-align: center;
-}
 
+
+/* UI/UX Section */
+/* Container for the cards: row direction, scroll if overflow */
 .uiux-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 0 10px;
+  display: flex;
+  flex-direction: row;        /* lay cards out in a row */
+  flex-wrap: nowrap;          /* no wrapping to next line */
+  gap: 30px;                  /* space between cards */
+  padding: 0 20px;            /* horizontal padding */
+  overflow-x: auto;           /* allow horizontal scroll on small screens */
+  justify-content: center;/* align cards to the left */
+  align-items: flex-start;    /* top-align cards */
 }
 
-.uiux-card {
+/* Each card: larger width, vertical stacking inside */
+.uiux-card {        /* fixed width of 350px */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .uiux-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* Image: full-width, fixed height */
 .uiux-image {
-  width: 60%;
-  height: 360px; /* or any height that suits your design */
+  width: 100%;
+  height: 200px;              /* adjust as needed */
   object-fit: cover;
-  object-position: top;
   border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.uiux-title {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  color: #333;
+/* Title & description styling */
+.uiux-card h3 {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  color: black;
 }
 
-.uiux-description {
-  font-size: 0.95rem;
-  color: #666;
-  margin-top: 5px;
+.uiux-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+  flex-grow: 1;               /* push footer or extra content down */
 }
-@media (max-width: 768px) {
-  /* Project Card Stack */
-  .project-card {
-    flex-direction: column;
-  }
 
-  .project-image {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+/* Responsive: allow wrapping on really small screens */
+@media (max-width: 480px) {
+  .uiux-grid {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-
-  .project-image img {
-    height: 200px;
-    object-fit: cover;
-    width: 100%;
-  }
-
-  .project-content {
-    padding: 15px;
-  }
-
-  .project-content h2 {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-
-  .tech,
-  .desc,
-  .source-link {
-    font-size: 14px;
-  }
-
-  /* UI/UX Section */
-  .uiux-image {
-    width: 100%;
-    height: 240px;
-  }
-
   .uiux-card {
-    padding: 10px;
-  }
-
-  .uiux-title {
-    font-size: 1rem;
-  }
-
-  .uiux-description {
-    font-size: 0.9rem;
-  }
-
-  .projects-heading {
-    font-size: 26px;
-    margin-bottom: 30px;
-  }
-
-  .uiux-section {
-    padding: 20px 10px;
+    flex: 0 0 90%;            /* almost full-width on phone */
+    max-width: 400px;
   }
 }
+

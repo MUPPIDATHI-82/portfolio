@@ -38,6 +38,7 @@ const Contact = () => {
   return (
     <>
       <p className="contact-heading">Contact Me!</p>
+      <hr className="underline"/>
       <div className="contact-container">
         
         <div className="personal-info">
