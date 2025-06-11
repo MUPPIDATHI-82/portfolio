@@ -14,32 +14,54 @@ const Contact = () => {
       return;
     }
 
-    const serviceID = "service_v2sf7jj";    // replace with your EmailJS service ID
-    const templateID = "template_ktskemr";  // replace with your EmailJS template ID
-    const userID = "VSl34M3YZfYnesNc3";          // replace with your EmailJS user ID
+    const serviceID = "service_v2sf7jj"; // replace with your EmailJS service ID
+    const templateID = "template_ktskemr"; // replace with your EmailJS template ID
+    const userID = "VSl34M3YZfYnesNc3"; // replace with your EmailJS user ID
 
     const templateParams = {
       message: message,
       to_email: "muppidathibecse@gmail.com",
     };
 
-    emailjs
-      .send(serviceID, templateID, templateParams, userID)
-      .then(
-        (response) => {
-          alert("Message sent successfully!");
-          setMessage("");
-        },
-        (err) => {
-          alert("Failed to send message. Try again later.");
-          console.error(err);
-        }
-      );
+    emailjs.send(serviceID, templateID, templateParams, userID).then(
+      (response) => {
+        alert("Message sent successfully!");
+        setMessage("");
+      },
+      (err) => {
+        alert("Failed to send message. Try again later.");
+        console.error(err);
+      }
+    );
   };
 
   return (
-    <div className="contact-section">
-      <h2 className="contact-heading">Contact Me</h2>
+    <>
+      <p className="contact-heading">Contact Me!</p>
+      <div className="contact-container">
+        
+        <div className="personal-info">
+          <p className="personal">Personal Info</p>
+          <p>Email: muppidathibecse@gmail.com</p>
+          <p>Phone No: +91 9345562272</p>
+          <p>Address: 4/196 A, Nethaji Nagar, Sankarankovil, Tenkasi.</p>
+        </div>
+
+        <div className="contact-details">
+          <form className="contact-form" onSubmit={sendEmail}>
+            <textarea
+              placeholder="Type Any Query . . . . ."
+              className="message-box"
+              rows="5"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+            <button className="send-button" type="submit">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
 
       <div className="contact-icons">
         <a
@@ -62,20 +84,7 @@ const Contact = () => {
           <FaEnvelope />
         </a>
       </div>
-
-      <form className="contact-form" onSubmit={sendEmail}>
-        <textarea
-          placeholder="Type your message..."
-          className="message-box"
-          rows="5"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        ></textarea>
-        <button className="send-button" type="submit">
-          Send
-        </button>
-      </form>
-    </div>
+    </>
   );
 };
 

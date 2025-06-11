@@ -1,0 +1,173 @@
+.projects-section {
+  padding: 50px 30px;
+  font-family: Arial, sans-serif;
+}
+
+.projects-heading {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #0a433d;
+}
+
+.project-card {
+  display: flex;
+  gap: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.project-image {
+  flex: 1;
+  max-width: 20%;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.project-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.tech {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tech span {
+  font-weight: normal;
+  color: #555;
+}
+
+.desc {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.source-link {
+  color: #e63946;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+.uiux-section {
+  padding: 40px 20px;
+  background-color: #fefefe;
+  text-align: center;
+}
+
+.uiux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.uiux-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.uiux-card:hover {
+  transform: translateY(-5px);
+}
+
+.uiux-image {
+  width: 60%;
+  height: 360px; /* or any height that suits your design */
+  object-fit: cover;
+  object-position: top;
+  border-radius: 8px;
+}
+
+.uiux-title {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+.uiux-description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 5px;
+}
+@media (max-width: 768px) {
+  /* Project Card Stack */
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .project-image img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .project-content {
+    padding: 15px;
+  }
+
+  .project-content h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .tech,
+  .desc,
+  .source-link {
+    font-size: 14px;
+  }
+
+  /* UI/UX Section */
+  .uiux-image {
+    width: 100%;
+    height: 240px;
+  }
+
+  .uiux-card {
+    padding: 10px;
+  }
+
+  .uiux-title {
+    font-size: 1rem;
+  }
+
+  .uiux-description {
+    font-size: 0.9rem;
+  }
+
+  .projects-heading {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .uiux-section {
+    padding: 20px 10px;
+  }
+}

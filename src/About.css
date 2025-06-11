@@ -38,11 +38,12 @@
   margin-bottom: 16px;
 }
 .about-heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 28px;
   font-weight: 600;
   color: #0a433d;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .edu-container {

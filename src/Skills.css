@@ -6,11 +6,12 @@
 }
 
 .skills-heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
   font-size: 28px;
   font-weight: 600;
   color: #0a433d;
   text-align: center;
-  margin-bottom: 30px;
 }
 .skills-section {
   display: flex;
@@ -25,13 +26,13 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  font-size: 22px; /* Increased font size */
+  font-size: 20px; /* Increased font size */
   background-color: #f9fdfd;
   border-radius: 20px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  width: 250px; /* Increased width */
-  height: 250px;
+  width: 220px; /* Increased width */
+  height: 200px;
 }
 
 .skill-content:hover {

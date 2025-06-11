@@ -28,6 +28,7 @@ const Navbar = () => {
         <span></span>
         <span></span>
         <span></span>
+        <span></span>
       </div>
 
       {/* Nav items, toggle class for mobile */}
@@ -41,9 +42,13 @@ const Navbar = () => {
         <NavLink to="/skills" className="navlink" onClick={handleLinkClick}>
           Skills
         </NavLink>
+        <NavLink to="/projects" className="navlink" onClick={handleLinkClick}>
+          Projects
+        </NavLink>
         <NavLink to="/contact" className="navlink" onClick={handleLinkClick}>
           Contact
         </NavLink>
+        
       </nav>
     </header>
   );
